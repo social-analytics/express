@@ -1,6 +1,6 @@
-# Social Analytics Express Code Style Guide 
+# Express Code Style Guide 
 
-*How to structure you code for Express 4* 
+*How to structure your code for Express 4* 
 
 ## Table of Contents 
 
@@ -11,7 +11,8 @@
   - **Chainable Route Handlers**: Recommended approach to avoid duplicate route names
 
     + Create chainable route handlers for a route path
-    + Since path is specified in a single location, it helps modularize your routes and improve code structure 
+    + This is new to Express 4 
+    + Since path is specified in a single location, it helps to modularize your routes and improve code structure 
     + Here is example of chained route handlers using `express.router()`:
 
     ```javascript
@@ -25,54 +26,35 @@
     ```
   - **Use `express.router()` over `app.route()`**: Recommended approach to modularize your routes
 
-    + A `express.router()` is a complete middleware and routing system; often referred to as a "mini-app" 
+    + A `express.router()` is a complete middleware and routing system; often referred to as a "mini-app". It can have its own middlware, param and HTTP verb methods. 
+    + This is new to Express 4    
+    + You can create many `express.router()` which are route instances and use each instance for a specific path, particlular middleware or logic. 
     + Both `app.route()` and `express.router()` can create chainable route handlers.
-
-## Objects
-
-  - Use the literal syntax for object creation.
-
+    + Here is an example of router with middleware specific to this route:
+    
     ```javascript
-    // bad
-    var item = new Object();
+    var express = require('express');
+    var router = express.Router();
 
-    // good
-    var item = {};
+    // middleware specific to this router
+    router.route(function timeLog(req, res, next) {
+      console.log('Time: ', Date.now());
+      next();
+    })
+    
+    // define the book page route 
+    router.route('/book')
+      .get(function(req,res) { 
+        res.send('get book'); 
+      }) 
+      .post(function(req,res) {
+        res.send('add book'); 
+    })
+
+    module.exports = router;
     ```
-
-  - Don't use [reserved words](http://es5.github.io/#x7.6.1) as keys. It won't work in IE8. [More info](https://github.com/airbnb/javascript/issues/61)
-
+    
+    the router module loaded in app.js 
     ```javascript
-    // bad
-    var superman = {
-      default: { clark: 'kent' },
-      private: true
-    };
-
-    // good
-    var superman = {
-      defaults: { clark: 'kent' },
-      hidden: true
-    };
-    ```
-
-  - Use readable synonyms in place of reserved words.
-
-    ```javascript
-    // bad
-    var superman = {
-      class: 'alien'
-    };
-
-    // bad
-    var superman = {
-      klass: 'alien'
-    };
-
-    // good
-    var superman = {
-      type: 'alien'
-    };
-    ```
-
-**[⬆ back to top](#table-of-contents)**
+    var book = require('./routes/book');
+    app.use('/', book); 

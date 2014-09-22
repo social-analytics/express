@@ -8,8 +8,9 @@
 
 ## Routing
 
-  - **Chainable Route Handlers**: Recommended approach to avoid duplicate route names
+  - **Chainable Route Handlers**
 
+    + Recommended approach to avoid duplicate route names
     + Create chainable route handlers for a route path
     + This is new to Express 4 
     + Since path is specified in a single location, it helps to modularize your routes and improve code structure 
@@ -24,8 +25,9 @@
         res.send('add book'); 
     })
     ```
-  - **Use `express.router()` over `app.route()`**: Recommended approach to modularize your routes
-
+  - **Use `express.router()` over `app.route()`** 
+  
+    + Recommended approach to modularize your routes
     + A `express.router()` is a complete middleware and routing system; often referred to as a "mini-app". It can have its own middlware, param and HTTP verb methods. 
     + This is new to Express 4    
     + You can create many `express.router()` which are route instances and use each instance for a specific path, particlular middleware or logic. 
@@ -55,6 +57,8 @@
     ```
     
     the router module loaded in app.js 
+    
     ```javascript
     var book = require('./routes/book');
     app.use('/', book); 
+    ```

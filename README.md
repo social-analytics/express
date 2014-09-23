@@ -1,10 +1,33 @@
 # Express Code Style Guide 
 
-*How to structure your code for Express 4* 
+*How to structure your code for Express 4. The purpose of this style guide is to provide guidance on building Express 4 applications by showing conventions that we use and why we choose them. Hopefully by following this style guide, our frontend team can have a consistent code structure.* 
+
 
 ## Table of Contents 
 
+  1. [Folder Structure](#structure) 
   1. [Routing](#routing)
+
+## Folder Structure 
+
+  - **Structure your Express 4 app so it is easy to manage and maintain**
+
+  + Express apps are structured a certain way, which this structure is very difficult to deviate from. If you have to find a specific view, route or css file, they are in different folders. This is a limitation of Express but we can still try to keep our code organized. 
+  + You cannot organize your code by "feature". For example, in "Login" you can't put all its css, js, view and route code into a `Login` folder.
+  + Keep it flat
+  + Only create a folder for common features like "logging, progress bars, etc." 
+  
+
+  - **File naming**
+  
+  + 
+
+
+
+
+
+  [More info](http://www.johnpapa.net/angular-growth-structure/)
+
 
 ## Routing
 

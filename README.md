@@ -8,6 +8,7 @@
   1. [LIFT Principle](#lift)
   1. [Application Structure](#structure) 
   1. [Routing](#routing)
+  1. [Express-Handlebars](#handlebars)
 
 
 ## LIFT Principle
@@ -77,7 +78,7 @@
 ```javascript
 <!-- recommend --> 
 // name it after the feature. 
-/routes/login.js 
+/routes/loginregister.js 
 ```
 
 **Middlewares**
@@ -232,4 +233,8 @@ I hope I answer your questions.
   })
   ```
     
+##Express-Handlebars
 
+http://stackoverflow.com/questions/21737057/handlebars-with-express-different-html-head-for-different-pages
+
+This is a great question and, in my mind, a glaring weakness in Express's view model. Fortunately, there is a solution: use Handlebars block helpers. Here's the helper I use for this purpose:

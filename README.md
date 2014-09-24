@@ -5,8 +5,8 @@
 
 ## Table of Contents 
 
-  1. [LIFT Principle](#liftprinciple)
-  1. [Application Structure](#applicationstructure) 
+  1. [LIFT Principle](#lift-principle)
+  1. [Application Structure](#application-structure) 
   1. [Routing](#routing)
   1. [Express-Handlebars](#express-handlebars)
 

@@ -141,7 +141,7 @@ I hope I answer your questions.
   + For views (html), js, or css, you can use this convention: feature dash subfeature. e.g. `facebook-keymetrics.html` which facebook is the feature, keymetrics is the page.
 
 
-
+https://github.com/johnpapa/angularjs-styleguide#application-structure-lift-principle
 
 
   [More info](http://www.johnpapa.net/angular-growth-structure/)

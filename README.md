@@ -5,10 +5,10 @@
 
 ## Table of Contents 
 
-  1. [LIFT Principle](#lift)
-  1. [Application Structure](#structure) 
+  1. [LIFT Principle](#liftprinciple)
+  1. [Application Structure](#applicationstructure) 
   1. [Routing](#routing)
-  1. [Express-Handlebars](#handlebars)
+  1. [Express-Handlebars](#express-handlebars)
 
 
 ## LIFT Principle

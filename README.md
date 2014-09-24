@@ -1,6 +1,6 @@
 # Express Code Style Guide 
 
-*How to structure your code for Express 4. The purpose of this style guide is to provide guidance on building Express 4 apps. We will show the conventions we use and why we use them. Hopefully by following this style guide, all team members will be able to follow a consistent coding structure.* 
+*How to structure your code for Express 4. The purpose of this style guide is to provide guidance on building Express 4 apps. We will show the conventions we use and why we use them. Hopefully by following this style guide, all team members will be able to follow a consistent coding structure and our Express 4 web application will be more maintable, readable.* 
 
 
 ## Table of Contents 

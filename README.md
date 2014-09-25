@@ -88,8 +88,20 @@
 + You can load middleware at the application or router level. 
 + There is an optional mount path
 
-+ `middlewares` for custom middlewares. 2 types of middlewares
++ `router-level-middlewares`, More Info(http://expressjs.com/api.html#middleware.router)
 
+```javascript
+<!-- router.js --> // a middleware sub-stack shows request info for any type of HTTP request to /user/:id 
+router.use('/user/:id', function(req, res, next) {
+  console.log('Request URL:', req.originalUrl);
+  next();
+}, function (req, res, next) {
+  console.log('Request Type:', req.method);
+  next();
+});
+``` 
+
++ `middlewares` for custom middlewares. 2 types of middlewares
 
 ```javascript
 <!-- middlewares.js --> 

@@ -8,7 +8,9 @@
   1. [LIFT Principle](#lift-principle)
   1. [Application Structure](#application-structure) 
   1. [Routing](#routing)
-  1. [Packages](#packages)
+  1. [Express Handlerbars](#express-handlebars)
+  1. [Middlewares](#middlewares)
+  2. [Server Tools](#server-tools)
 
 
 ## LIFT Principle
@@ -245,19 +247,34 @@ https://github.com/johnpapa/angularjs-styleguide#application-structure-lift-prin
   })
   ```
     
-##Packages 
-
-What we use in our web app.
     
-###Express-Handlebars
+##Express Handlebars
+
+How to use the power of the handlebars for our express web app: 
 
 http://stackoverflow.com/questions/21737057/handlebars-with-express-different-html-head-for-different-pages
 
-This is a great question and, in my mind, a glaring weakness in Express's view model. Fortunately, there is a solution: use Handlebars block helpers. Here's the helper I use for this purpose:
+This is a great question and, in my mind, a glaring weakness in Express's view model. Fortunately, there is a solution: use Handlebars block helpers. Here's the helper I use for this purpose.
 
+
+##Middlewares
+
+What middleware packages we use in our web app and why. 
 
 ###Restler 
 
 https://www.npmjs.org/package/restler
 
 Handles our HTTP request. Our old app used it too. 
+
+##Server Tools
+
+###Cheerio 
+
+[cheerio](http://browsenpm.org/package/cheerio) is a fast, flexible, and lean implementation of core jQuery designed specifically for the server. 
+
+####Features
+
+* Familiar syntax. cheerio implements a subset of core jQuery. cheerio removes all the DOM inconsistencies and browser cruft from the jQuery library, revealing its truly gorgeous API.
+* Blazingly fast. cheerio works with a very simple, consistent DOM model. As a result parsing, manipulating, and rendering are incredibly efficient. Preliminary end-to-end benchmarks suggest that cheerio is about 8x faster than JSDOM.
+* Insanely flexible. cheerio wraps around htmlparser2. cheerio can parse nearly any HTML or XML document.

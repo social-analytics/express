@@ -269,12 +269,11 @@ Handles our HTTP request. Our old app used it too.
 
 ##Server Tools
 
+What npm packages we use in our web app and why
+
 ###Cheerio 
 
-[cheerio](http://browsenpm.org/package/cheerio) is a fast, flexible, and lean implementation of core jQuery designed specifically for the server. 
+[cheerio](http://browsenpm.org/package/cheerio) is a fast, flexible, and lean implementation of core jQuery designed 
+specifically for the server. 
 
-####Features
-
-* Familiar syntax. cheerio implements a subset of core jQuery. cheerio removes all the DOM inconsistencies and browser cruft from the jQuery library, revealing its truly gorgeous API.
-* Blazingly fast. cheerio works with a very simple, consistent DOM model. As a result parsing, manipulating, and rendering are incredibly efficient. Preliminary end-to-end benchmarks suggest that cheerio is about 8x faster than JSDOM.
-* Insanely flexible. cheerio wraps around htmlparser2. cheerio can parse nearly any HTML or XML document.
+**Why?** When I need to manipulate html files using jQuery from the server-side. Sometimes you just can't do it from the client-side. For example, the helper for handlebar-express needs to modify the `class` attribute in a <li> based on the route selected. 

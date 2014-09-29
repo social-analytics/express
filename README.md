@@ -259,6 +259,8 @@ This is a great question and, in my mind, a glaring weakness in Express's view m
 
 ##Middlewares
 
+**TODO: do we need to move these packages guide to another document just for npm packages?**
+
 What middleware packages we use in our web app and why. 
 
 ###1. Restler 

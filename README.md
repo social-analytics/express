@@ -261,7 +261,7 @@ This is a great question and, in my mind, a glaring weakness in Express's view m
 
 What middleware packages we use in our web app and why. 
 
-###Restler 
+###1. Restler 
 
 https://www.npmjs.org/package/restler
 
@@ -277,5 +277,3 @@ What npm packages we use in our web app and why
 specifically for the server. 
 
 **Why?** When I need to manipulate html files using jQuery from the server-side. Sometimes you just can't do it from the client-side. For example, the helper for handlebar-express needs to modify the `class` attribute in a <li> based on the route selected. 
-
-###1. Cheerioees

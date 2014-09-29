@@ -271,9 +271,11 @@ Handles our HTTP request. Our old app used it too.
 
 What npm packages we use in our web app and why
 
-###Cheerio 
+###1. Cheerio 
 
 [cheerio](http://browsenpm.org/package/cheerio) is a fast, flexible, and lean implementation of core jQuery designed 
 specifically for the server. 
 
 **Why?** When I need to manipulate html files using jQuery from the server-side. Sometimes you just can't do it from the client-side. For example, the helper for handlebar-express needs to modify the `class` attribute in a <li> based on the route selected. 
+
+###1. Cheerioees

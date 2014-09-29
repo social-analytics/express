@@ -8,7 +8,7 @@
   1. [LIFT Principle](#lift-principle)
   1. [Application Structure](#application-structure) 
   1. [Routing](#routing)
-  1. [Express-Handlebars](#express-handlebars)
+  1. [Packages](#packages)
 
 
 ## LIFT Principle
@@ -245,8 +245,19 @@ https://github.com/johnpapa/angularjs-styleguide#application-structure-lift-prin
   })
   ```
     
-##Express-Handlebars
+##Packages 
+
+What we use in our web app.
+    
+###Express-Handlebars
 
 http://stackoverflow.com/questions/21737057/handlebars-with-express-different-html-head-for-different-pages
 
 This is a great question and, in my mind, a glaring weakness in Express's view model. Fortunately, there is a solution: use Handlebars block helpers. Here's the helper I use for this purpose:
+
+
+###Restler 
+
+https://www.npmjs.org/package/restler
+
+Handles our HTTP request. Our old app used it too. 

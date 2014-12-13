@@ -279,3 +279,13 @@ What npm packages we use in our web app and why
 specifically for the server. 
 
 **Why?** When I need to manipulate html files using jQuery from the server-side. Sometimes you just can't do it from the client-side. For example, the helper for handlebar-express needs to modify the `class` attribute in a <li> based on the route selected. 
+
+
+
+Middleware Pitfalls - common mistakes made by people when using the middleware
+https://blog.safaribooksonline.com/2014/03/10/express-js-middleware-demystified/
+
+- order matters
+- forgetting next() 
+- all middleware and routes share the same "request" and "response" object. be careful of modifying its properties. 
+- middleware do async operations, be careful where you use the next(), otherwise execution will continue without the async operation having been completed.

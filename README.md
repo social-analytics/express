@@ -287,5 +287,5 @@ https://blog.safaribooksonline.com/2014/03/10/express-js-middleware-demystified/
 
 - order matters
 - forgetting next() 
-- all middleware and routes share the same "request" and "response" object. be careful of modifying its properties. 
+- all middleware and routes share the same "request" and "response" object. be careful of overriding fields of other middlware. 
 - middleware do async operations, be careful where you use the next(), otherwise execution will continue without the async operation having been completed.

@@ -289,3 +289,18 @@ https://blog.safaribooksonline.com/2014/03/10/express-js-middleware-demystified/
 - forgetting next() 
 - all middleware and routes share the same "request" and "response" object. be careful of overriding fields of other middlware. 
 - middleware do async operations, be careful where you use the next(), otherwise execution will continue without the async operation having been completed.
+
+
+How to modularize app.js 
+http://stackoverflow.com/questions/5055853/how-do-you-modularize-node-js-w-express
+http://ponyfoo.com/articles/modularizing-node-applications-with-express
+http://www.quora.com/What-is-the-recommended-method-modularizing-and-packaging-my-web-apps-JavaScript-code
+
+example structure
+https://github.com/kishorenc/road
+https://github.com/Medium/matador
+https://github.com/madhums/node-express-mongoose-demo
+http://codereview.stackexchange.com/questions/51213/modularize-this-node-js-express-server-code-for-routes-and-session-handle
+
+Password Reset 
+http://sahatyalkabov.com/how-to-implement-password-reset-in-nodejs/
